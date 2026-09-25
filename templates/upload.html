@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Toxic Speech Detection — Upload</title>
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 500px; margin: 80px auto; padding: 0 20px; color: #222; }
+        h1 { font-size: 22px; margin-bottom: 8px; }
+        p { color: #555; margin-bottom: 24px; }
+        input[type="file"] { display: block; margin-bottom: 16px; }
+        button { background: #2d5f8a; color: white; border: none; padding: 10px 20px; font-size: 15px; border-radius: 4px; cursor: pointer; }
+        button:hover { background: #234a6d; }
+        .error { color: #b00020; margin-top: 16px; }
+    </style>
+</head>
+<body>
+    <h1>Toxic Speech Detection</h1>
+    <p>Upload a voice clip to check for toxic speech.</p>
+    <form action="/upload" method="POST" enctype="multipart/form-data">
+        <input type="file" name="audio" accept="audio/*,video/mp4" required>
+        <button type="submit">Analyze</button>
+    </form>
+    {% if error %}
+        <p class="error">{{ error }}</p>
+    {% endif %}
+</body>
+</html>

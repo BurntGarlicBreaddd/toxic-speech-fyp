@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Analysis Results</title>
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 600px; margin: 60px auto; padding: 0 20px; color: #222; }
+        h1 { font-size: 22px; margin-bottom: 24px; }
+        .flag { display: inline-block; padding: 6px 14px; border-radius: 4px; font-weight: bold; font-size: 14px; margin-bottom: 24px; }
+        .flag.toxic { background: #fdecea; color: #b00020; }
+        .flag.clean { background: #e6f4ea; color: #1e7e34; }
+        .section { margin-bottom: 20px; }
+        .label { font-size: 13px; text-transform: uppercase; letter-spacing: 0.05em; color: #777; margin-bottom: 4px; }
+        .value { font-size: 16px; }
+        .transcript { background: #f7f7f7; padding: 14px; border-radius: 4px; line-height: 1.5; }
+        a { color: #2d5f8a; }
+    </style>
+</head>
+<body>
+    <h1>Analysis Results</h1>
+    <span class="flag {{ 'toxic' if flagged else 'clean' }}">
+        {{ 'FLAGGED AS TOXIC' if flagged else 'NOT FLAGGED' }}
+    </span>
+    <div class="section">
+        <div class="label">Transcript</div>
+        <div class="transcript">{{ transcript }}</div>
+    </div>
+    <div class="section">
+        <div class="label">Toxicity score (0–1)</div>
+        <div class="value">{{ "%.3f"|format(toxicity_score) }}</div>
+    </div>
+    <div class="section">
+        <div class="label">Sentiment score (-1 to +1)</div>
+        <div class="value">{{ "%.3f"|format(sentiment_score) }}</div>
+    </div>
+    <p><a href="/">&larr; Analyze another clip</a></p>
+</body>
+</html>
