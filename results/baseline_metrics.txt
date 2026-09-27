@@ -1,0 +1,133 @@
+=== Summary (all rules side by side) ===
+
+RULE        PRECISION   RECALL      F1          ACCURACY    
+------------------------------------------------------------
+Baseline    1.000       0.750       0.857       0.875       
+Option A    0.909       0.833       0.870       0.875       
+Option B    0.875       0.583       0.700       0.750       
+
+=== Baseline ===
+
+Per-clip results:
+CLIP                               GROUND TRUTH   PREDICTED      OUTCOME   
+---------------------------------------------------------------------------
+LOLCROWNIE'SCRASHOUT(toxic).mp3    toxic          toxic          TP        
+LOLDoubleliftPobelter(non-toxic).mp3not_toxic      not_toxic      TN        
+LOLPekinwoof(non-toxic).mp3        not_toxic      not_toxic      TN        
+LOLYamikazetilts(toxic).mp3        toxic          toxic          TP        
+LOLbroxah(non-toxic).mp3           not_toxic      not_toxic      TN        
+LOLvtuber(toxic).mp3               toxic          toxic          TP        
+MarvelRivalracist(toxic).mp3       toxic          toxic          TP        
+MarvelRivals(toxic).mp3            toxic          toxic          TP        
+MarvelRivalsWhoelsome(non-toxic).mp4not_toxic      not_toxic      TN        
+MarvelRivalsfunny(non-toxic).mp3   not_toxic      not_toxic      TN        
+Marvelrivaltoxic2(toxic).mp3       toxic          not_toxic      FN        
+RobloxObama(non-toxic).mp3         not_toxic      not_toxic      TN        
+Robloxcurse(toxic).mp3             toxic          toxic          TP        
+Robloxdad(non-toxic).mp3           not_toxic      not_toxic      TN        
+Robloxmad(toxic).mp3               toxic          toxic          TP        
+Robloxragebait(toxic).mp3          toxic          toxic          TP        
+Robloxwholesome(non-toxic).mp3     not_toxic      not_toxic      TN        
+Valchilllobby(non-toxic).mp3       not_toxic      not_toxic      TN        
+Valcrashout(toxic).mp3             toxic          not_toxic      FN        
+Valfunny(non-toxic).mp3            not_toxic      not_toxic      TN        
+Valrage(toxic).mp3                 toxic          not_toxic      FN        
+Valragebait(toxic).mp4             toxic          toxic          TP        
+Valsinging(non-toxic).mp3          not_toxic      not_toxic      TN        
+marverivalgirl(non-toxic).mp3      not_toxic      not_toxic      TN        
+
+Confusion matrix:
+  True Positives:  9
+  True Negatives:  12
+  False Positives: 0
+  False Negatives: 3
+
+Metrics:
+  Precision: 1.000
+  Recall:    0.750
+  F1 Score:  0.857
+  Accuracy:  0.875
+
+=== Option A ===
+
+Per-clip results:
+CLIP                               GROUND TRUTH   PREDICTED      OUTCOME   
+---------------------------------------------------------------------------
+LOLCROWNIE'SCRASHOUT(toxic).mp3    toxic          toxic          TP        
+LOLDoubleliftPobelter(non-toxic).mp3not_toxic      toxic          FP        
+LOLPekinwoof(non-toxic).mp3        not_toxic      not_toxic      TN        
+LOLYamikazetilts(toxic).mp3        toxic          toxic          TP        
+LOLbroxah(non-toxic).mp3           not_toxic      not_toxic      TN        
+LOLvtuber(toxic).mp3               toxic          toxic          TP        
+MarvelRivalracist(toxic).mp3       toxic          toxic          TP        
+MarvelRivals(toxic).mp3            toxic          toxic          TP        
+MarvelRivalsWhoelsome(non-toxic).mp4not_toxic      not_toxic      TN        
+MarvelRivalsfunny(non-toxic).mp3   not_toxic      not_toxic      TN        
+Marvelrivaltoxic2(toxic).mp3       toxic          not_toxic      FN        
+RobloxObama(non-toxic).mp3         not_toxic      not_toxic      TN        
+Robloxcurse(toxic).mp3             toxic          toxic          TP        
+Robloxdad(non-toxic).mp3           not_toxic      not_toxic      TN        
+Robloxmad(toxic).mp3               toxic          toxic          TP        
+Robloxragebait(toxic).mp3          toxic          toxic          TP        
+Robloxwholesome(non-toxic).mp3     not_toxic      not_toxic      TN        
+Valchilllobby(non-toxic).mp3       not_toxic      not_toxic      TN        
+Valcrashout(toxic).mp3             toxic          not_toxic      FN        
+Valfunny(non-toxic).mp3            not_toxic      not_toxic      TN        
+Valrage(toxic).mp3                 toxic          toxic          TP        
+Valragebait(toxic).mp4             toxic          toxic          TP        
+Valsinging(non-toxic).mp3          not_toxic      not_toxic      TN        
+marverivalgirl(non-toxic).mp3      not_toxic      not_toxic      TN        
+
+Confusion matrix:
+  True Positives:  10
+  True Negatives:  11
+  False Positives: 1
+  False Negatives: 2
+
+Metrics:
+  Precision: 0.909
+  Recall:    0.833
+  F1 Score:  0.870
+  Accuracy:  0.875
+
+=== Option B ===
+
+Per-clip results:
+CLIP                               GROUND TRUTH   PREDICTED      OUTCOME   
+---------------------------------------------------------------------------
+LOLCROWNIE'SCRASHOUT(toxic).mp3    toxic          not_toxic      FN        
+LOLDoubleliftPobelter(non-toxic).mp3not_toxic      toxic          FP        
+LOLPekinwoof(non-toxic).mp3        not_toxic      not_toxic      TN        
+LOLYamikazetilts(toxic).mp3        toxic          toxic          TP        
+LOLbroxah(non-toxic).mp3           not_toxic      not_toxic      TN        
+LOLvtuber(toxic).mp3               toxic          toxic          TP        
+MarvelRivalracist(toxic).mp3       toxic          toxic          TP        
+MarvelRivals(toxic).mp3            toxic          toxic          TP        
+MarvelRivalsWhoelsome(non-toxic).mp4not_toxic      not_toxic      TN        
+MarvelRivalsfunny(non-toxic).mp3   not_toxic      not_toxic      TN        
+Marvelrivaltoxic2(toxic).mp3       toxic          not_toxic      FN        
+RobloxObama(non-toxic).mp3         not_toxic      not_toxic      TN        
+Robloxcurse(toxic).mp3             toxic          toxic          TP        
+Robloxdad(non-toxic).mp3           not_toxic      not_toxic      TN        
+Robloxmad(toxic).mp3               toxic          toxic          TP        
+Robloxragebait(toxic).mp3          toxic          not_toxic      FN        
+Robloxwholesome(non-toxic).mp3     not_toxic      not_toxic      TN        
+Valchilllobby(non-toxic).mp3       not_toxic      not_toxic      TN        
+Valcrashout(toxic).mp3             toxic          not_toxic      FN        
+Valfunny(non-toxic).mp3            not_toxic      not_toxic      TN        
+Valrage(toxic).mp3                 toxic          toxic          TP        
+Valragebait(toxic).mp4             toxic          not_toxic      FN        
+Valsinging(non-toxic).mp3          not_toxic      not_toxic      TN        
+marverivalgirl(non-toxic).mp3      not_toxic      not_toxic      TN        
+
+Confusion matrix:
+  True Positives:  7
+  True Negatives:  11
+  False Positives: 1
+  False Negatives: 5
+
+Metrics:
+  Precision: 0.875
+  Recall:    0.583
+  F1 Score:  0.700
+  Accuracy:  0.750
