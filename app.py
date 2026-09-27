@@ -23,7 +23,7 @@ whisper_model = whisper.load_model("base")
 ALLOWED_AUDIO_EXTENSIONS = {".mp3", ".mp4", ".wav", ".m4a", ".ogg", ".webm"}
 
 #which flagging rule in use
-ACTIVE_FLAGGING_RULE = flagging.baseline
+ACTIVE_FLAGGING_RULE = flagging.option_a
 
 
 def get_toxicity_score(text):
